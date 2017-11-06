@@ -4,6 +4,7 @@ import json
 import re
 import pandas as pd
 import numpy as np
+from fractions import Fraction
 
 INFILE="5e-SRD-Monsters.json"
 OUTFILE="mounts.xlsx"
@@ -22,6 +23,10 @@ def expand_column(table, col_name):
     expanded_column.rename(columns=lambda label: "_".join([col_name, str(label + 1)]), inplace=True)
     
     return pd.concat([table.iloc[:, 0:col_id], expanded_column, table.iloc[:,col_id + 1:]], axis="columns")
+
+def ability_bonus(ability_score):
+    return (ability_score - 10) // 2
+
 
 with open(INFILE) as f:
     monsters = json.load(f)
@@ -44,6 +49,17 @@ mounts_table = mounts_table[new_order]
 # expand the nested columns into multiple columns
 mounts_table = expand_column(mounts_table, "actions")
 mounts_table = expand_column(mounts_table, "special_abilities")
+
+# replace CR fraction strings with numbers
+mounts_table.loc[:,'challenge_rating'] = mounts_table.loc[:,"challenge_rating"].map(lambda cr: float(Fraction(cr)))
+
+# remove "passive Perception" stat from senses
+#TODO should grab the number and add a column called "passive_perception"
+mounts_table['senses'] = mounts_table['senses'].map(lambda senses: re.sub('(, )?passive Perception [0-9][0-9]?', "", senses))
+
+# add CON bonus to the hit dice column
+#TODO actually handle negative CON bonuses
+mounts_table['hit_dice'] = mounts_table['hit_dice'].str.cat(mounts_table['constitution'].map(ability_bonus).astype(str), sep="+")
 
 # replace underscores in column headers
 mounts_table.rename(columns=lambda col: col.replace("_", " "), inplace=True)

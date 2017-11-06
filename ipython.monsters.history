@@ -681,3 +681,155 @@ mounts_table['challenge_rating'].map(float(Fraction))
 mounts_table['challenge_rating'].map(Fraction)
 mounts_table['challenge_rating'].map(Fraction).map(float)
 %history -f ipython.monsters.history
+mounts_table
+mounts_table.head(0)
+mounts_table.head(1)
+dfX
+dfX['butt']
+dfX['butt'].map("".split)
+help(pd.Series.map())
+help(pd.Series.map)
+help(pd.Series.apply)
+dfX['butt'].map(np.log)
+dfX['butt'].map(np.log(np.log))
+float(Fraction("1/3"))
+mounts_table
+mounts_table['challenge_rating']
+mounts_table['challenge_rating'].map(lambda cr: float(Fraction(cr)))
+mounts_table['challenge_rating'] = mounts_table['challenge_rating'].map(lambda cr: float(Fraction(cr)))
+mounts_table['challenge_rating'] = mounts_table.loc["challenge_rating"].map(lambda cr: float(Fraction(cr)))
+mounts_table['challenge_rating'] = mounts_table.loc[,"challenge_rating"].map(lambda cr: float(Fraction(cr)))
+mounts_table['challenge_rating'] = mounts_table.columns.loc["challenge_rating"].map(lambda cr: float(Fraction(cr)))
+mounts_table['challenge_rating'] = mounts_table['challenge_rating'].map(lambda cr: float(Fraction(cr)))
+mounts_table['challenge_rating'].map(lambda cr: float(Fraction(cr)))
+mounts_table['challenge_rating'] = mounts_table.loc[,"challenge_rating"].map(lambda cr: float(Fraction(cr)))
+mounts_table['challenge_rating'] = mounts_table.loc[:,"challenge_rating"].map(lambda cr: float(Fraction(cr)))
+mounts_table['challenge_rating'].map(lambda cr: float(Fraction(cr)))
+mounts_table['challenge_rating'].map(lambda cr: float(Fraction(cr)))
+mounts_table.loc["challenge_rating"]
+mounts_table.loc[,"challenge_rating"]
+mounts_table.loc["","challenge_rating"]
+mounts_table['challenge_rating'] = mounts_table.loc[:,"challenge_rating"].map(lambda cr: float(Fraction(cr)))
+mounts_table.loc["","challenge_rating"]
+mounts_table.loc["Warhorse","challenge_rating"]
+mounts_table.loc["challenge_rating"]
+help(pd.DataFrame.loc)
+mounts_table.loc[:,"challenge_rating"]
+mounts_table.loc[:,'challenge_rating'] = mounts_table.loc[:,"challenge_rating"].map(lambda cr: float(Fraction(cr)))
+cr_as_float = mounts_table.loc[:,"challenge_rating"].map(lambda cr: float(Fraction(cr)))
+cr_as_float
+mounts_table["challenge_rating"]
+mounts_table["challenge_rating"] = cr_as_float
+mounts_table["challenge_rating"].update(cr_as_float)
+poop=dfX.copy
+poop
+dfX
+dfX[1,'ass'] = 3
+dfX
+poop
+del poop
+dfX.drop("1,ass")
+dfX
+dfX.drop([(1,"ass")],axis="columns")
+dfX = dfX.drop([(1,"ass")],axis="columns")
+dfX
+dfX[1,'ass']
+dfX[1]["ass"]
+dfX.loc[1,"ass"]
+dfX.loc[1,"ass"] = 3
+dfX
+poop = dfX
+dfX.loc[2,"butt"] = 17.6
+poop
+mounts_table.["challenge_rating"].map(lambda cr: float(Fraction(cr)))
+mounts_table["challenge_rating"].map(lambda cr: float(Fraction(cr)))
+mounts_table.columns.get_loc("challenge_rating")
+mounts_table.insert(0, "challenge_rating_as_numbers", mounts_table["challenge_rating"].map(lambda cr: float(Fraction(cr))))
+mounts_table.head(1)
+mounts_table.drop("challenge_rating_as_numbers", axis="columns")
+mounts_table.drop("challenge_rating_as_numbers", axis="columns",inplace=True)
+mounts_table
+mounts_table.head(1)
+history
+mounts
+mounts[4]
+mounts_table['senses']
+help(re.purge)
+help(re.sub)
+re.sub('(, )?passive Perception [0-9][0-9]?
+re.sub('(, )?passive Perception [0-9][0-9]?', "", mounts_table["senses"][2])
+re.sub('(, )?passive Perception [0-9][0-9]?', "", mounts_table["senses"][8])
+mounts_table['senses']
+re.sub('(, )?passive Perception [0-9][0-9]?', "", mounts_table["senses"][4])
+mounts_table['senses'].map(lambda senses: re.sub('(, )?passive Perception [0-9][0-9]?', "", senses))
+mounts_table['senses'] = mounts_table['senses'].map(lambda senses: re.sub('(, )?passive Perception [0-9][0-9]?', "", senses))
+mounts_table.head(1)
+monsters
+[poop['senses'] for poop in monsters]
+def ability_bonus(ability_score):
+    return ability_score - 10
+ability_bonus(20)
+18 % 4
+18 % 3
+18 // 3
+18 // 4
+18 // 2
+18 - 10 // 2
+(18 - 10) // 2
+def ability_bonus(ability_score):
+    return (ability_score - 10) // 2
+ability_bonus(14)
+ability_bonus(7)
+mounts_table.add_suffix("ass")
+mounts_table['charisma'].add_suffix("ass")
+help(pd.Series.add_suffix)
+mounts_table.add_suffix("ass")
+mounts_table['charisma'].add(23)
+mounts_table['charisma'].add_suffix(23)
+mounts_table['charisma'].add_suffix("ass")
+mounts_table['charisma'].add("ass")
+mounts_table['constitution'].map(ability_bonus)
+mounts_table['hit_dice'] + mounts_table['constitution'].map(ability_bonus)
+pd.concat([mounts_table['hit_dice'], mounts_table['constitution'].map(ability_bonus)],axis="columns")
+mounts_table['hit_dice'].str.cat(mounts_table['constitution'].map(ability_bonus))
+mounts_table['hit_dice'].str.cat(mounts_table['constitution'].map(ability_bonus).str)
+mounts_table['hit_dice'].str.cat(mounts_table['constitution'].map(str(ability_bonus)))
+mounts_table['hit_dice'].str.cat(mounts_table['constitution'].map(ability_bonus))
+mounts_table['hit_dice'].str.cat(mounts_table['constitution'].map(ability_bonus).to_string)
+mounts_table['hit_dice'].str.cat(mounts_table['constitution'].map(ability_bonus).to_string)()
+mounts_table['hit_dice'].str.cat(mounts_table['constitution'].map(ability_bonus).to_string())
+mounts_table['hit_dice'].str.cat(mounts_table['constitution'].map(ability_bonus).astype(str))
+mounts_table['hit_dice'].str.cat("+",mounts_table['constitution'].map(ability_bonus).astype(str))
+mounts_table['hit_dice'].str.cat(pd.Series("+"),mounts_table['constitution'].map(ability_bonus).astype(str))
+help(pd.Series.cat)
+help(pd.Series.str.cat)
+mounts_table['hit_dice'].str.cat(mounts_table['constitution'].map(ability_bonus).astype(str), sep="+")
+mounts_table['hit_dice'] = mounts_table['hit_dice'].str.cat(mounts_table['constitution'].map(ability_bonus).astype(str), sep="+")
+%ed ability_bonus
+mounts_table
+mounts_table['hit_dice']
+mounts_table['hit_dice'].map(re.sub("+.",""))
+mounts_table['hit_dice'].map(lambda c: re.sub("+.","",c))
+help(re.sub)
+mounts_table['hit_dice'].map(lambda c: re.sub("+.","",c))
+mounts_table['hit_dice'].map(lambda c: re.sub("\+.","",c))
+mounts_table['hit_dice'] = mounts_table['hit_dice'].map(lambda c: re.sub("\+.","",c))
+mounts_table.head(1)
+mounts_table['hit_dice']
+def max_roll(d_string):
+    num_dice, die_size = d_string.split("d")
+    return num_dice * die_size
+max_roll("3d6")
+def max_roll(d_string):
+    [num_dice, die_size] = d_string.split("d")
+    return num_dice * die_size
+max_roll("3d6")
+"3d12".split("d")
+def max_roll(d_string):
+    num_dice, die_size = d_string.split("d")
+    return int(num_dice) * int(die_size)
+max_roll("3d6")
+mounts_table['hit_dice'].map(max_roll)
+mounts_table['hit_dice'].map(max_roll)
+mounts_table['hit_dice'].map(max_roll)
+%history -f ipython.monsters.history
