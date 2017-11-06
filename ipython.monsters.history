@@ -668,3 +668,16 @@ expand_column(expand_column(mounts_table, "actions"), "special_abilities")
 expand_column(expand_column(mounts_table, "actions"), "special_abilities").head(0)
 expanded_mounts_table = expand_column(expand_column(mounts_table, "actions"), "special_abilities")
 %history -f ipython.monsters.history
+%ed squish_dict
+dfX
+dfX.columns.replace()
+dfX.rename(columns=lambda col: col.replace("a","XXX"))
+mounts_table
+mounts_table['challenge_rating']
+from fractions import Fraction
+mounts_table['challenge_rating'].map(Fraction)
+mounts_table['challenge_rating'].map(float)
+mounts_table['challenge_rating'].map(float(Fraction))
+mounts_table['challenge_rating'].map(Fraction)
+mounts_table['challenge_rating'].map(Fraction).map(float)
+%history -f ipython.monsters.history
