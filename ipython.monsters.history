@@ -1,0 +1,670 @@
+import json
+json.load("5e-SRD-Monsters.json")
+monsters = json.load("5e-SRD-Monsters.json")
+monsters = json.load("5e-SRD-Monsters.json")
+with open("monsters.json") as f:
+    monsters = json.load(f)
+monsters
+from pprint import pprint
+pprint(monsters)
+dir(data)
+data['entries']
+monsters['entries']
+monsters[0]
+monsters[1]
+monsters[1]
+monsters[1]['name']
+monsters[0]['name']
+thing for thing in monsters if(thing['name'] == "warhorse")
+[thing for thing in monsters if(thing['name'] == "warhorse")]
+critter = monsters[4]
+critter['name
+critter['name']
+[thing for thing in monsters if(thing['name'] == "warhorse")]
+[thing for thing in monsters if thing['name'] == "warhorse"]
+type(monsters)
+monsters[323]['name
+monsters[323]['name']
+[thing for thing in monsters]
+[thing for thing in monsters if name == "warhorse"]
+[thing for thing in monsters if thing['name'] == "warhorse"]
+[thing['name'] for thing in monsters]
+[thing[0] for thing in monsters]
+[thing for thing in monsters]
+[type(thing) for thing in monsters]
+[thing for thing in monsters][0]
+[thing for thing in monsters][0]['name']
+[thing for thing in monsters if thing['name'] == "warhorse"]
+[thing for thing in monsters if thing[['name']] == "warhorse"]
+[thing for thing in monsters if thing['name'] == "warhorse"]
+[thing for thing in monsters][0]['name']
+dicA = { "ass": 23 }
+dicB = { "butt": 12 }
+dicC = { "cock": 2}
+dicB
+listX = [dicA, dicB, dicC]
+listX
+[part for part in listX]
+[part for part in listX if part['butt'] == 12]
+dicA
+dicA+={'class': "green"}
+dicA
+dicA = dicA + dicB
+dicA.update("class": "sexy")
+dicA.update({"class": "sexy"})
+dicA
+listX
+dicB.update({"class": "smelly"})
+dicC.update({"class": "sexy"})
+listX
+from pprint import pprint
+pprint(listX)
+[part for part in listX]
+[part['class'] for part in listX]
+[part for part in listX if part['class'] == "sexy"]
+[thing['name
+[thing['name'] for thing in monsters]
+len[monsters]
+len(monsters)
+monsters[len(monsters)]
+monsters[len(monsters)-1]
+monsters[len(monsters)-1].keys()
+monsters[len(monsters)-2].keys()
+[thing['name'] for thing in monsters]
+[thing['name'] for thing in monsters if exists(thing['name'])]
+[thing['name'] for thing in monsters if 'name' in thing]
+[thing['name'] for thing in monsters if 'name' in thing and thing['name'] == "warhorse"]
+[thing['name'] for thing in monsters if 'name' in thing and thing['name'] == "acolyte"]
+[thing for thing in monsters if 'name' in thing and thing['name'] == "acolyte"]
+[thing['name'] for thing in monsters if 'name' in thing and thing['name'] == "Warhorse"]
+[thing for thing in monsters if 'name' in thing and thing['name'] == "Warhorse"]
+[creature for creature in monsters if 'name' in creature and creature['type'] == "beast"]
+[creature['name'] for creature in monsters if 'name' in creature and creature['type'] == "beast"]
+[creature['name'] for creature in monsters if 'name' in creature and creature['type'] == "beast" and creature['size'] == "large"]
+[thing for thing in monsters if 'name' in thing and thing['name'] == "Warhorse"]
+[creature['name'] for creature in monsters if 'name' in creature and creature['type'] == "beast" and creature['size'] == "Large"]
+mounts = [creature['name'] for creature in monsters if 'name' in creature and creature['type'] == "beast" and creature['size'] == "Large"]
+mounts[13]
+mounts = [creature for creature in monsters if 'name' in creature and creature['type'] == "beast" and creature['size'] == "Large"]
+mounts
+mounts[12]
+[a['alignment'] for a in mounts]
+[a['name'] for a in mounts if a['alignment'] != "unaligned"]
+[a['name'] for a in mounts if a['alignment'] =~ "unaligned"]
+import re
+re.match
+re.match()
+re.match("evil","neutral evil")
+re.match("evil","neutral evi")
+re.match("evil","neutral evil")
+re.match("evil","neutral evil") == True
+re.match("evil","neutral evi") == True
+re.search("evil","neutral evil") == True
+re.search(".*evil.*","neutral evil") == True
+re.search("evil","neutral evil") == True
+print(re.search("evil","neutral evil"))
+re.search("evil","neutral evil") == False
+re.search("evil","neutral evil") == None
+re.search("evil","neutral evi") == None
+[a['name'] for a in mounts if re.search("evil", a['alignment'])]
+[a['name'] for a in mounts if not re.search("evil", a['alignment'])]
+mounts = [creature for creature in monsters if 'name' in creature and creature['type'] == "beast" and creature['size'] == "Large" and not re.search("evil", creature['alignment'])]
+mounts
+[a['name'] for a in mounts]
+mounts[2]
+mounts[1]
+[len(a) for a in mounts]
+mounts[0]
+mounts[len(mounts)-2]
+get_keys(mounts[0])
+mounts[0].keys()
+mounts[len(mounts)-2].keys()
+import pandas as pd
+poop = pd.DataFrame(mounts)
+poop
+help(pandas)
+help(pd)
+poop
+type(mounts)
+type(mounts[1])
+listX
+poop = pd.DataFrame(listX)
+poop
+poop = pd.DataFrame(mounts)
+poop
+poop.head
+poop.head()
+poop.drop("alignment")
+poop.drop("alignment", axis="columns")
+poop.drop("alignment", axis="columns")
+poop.drop("alignment", axis="columns").head()
+mounts[12]
+poop.drop("alignment", axis="columns").head()
+poop.drop(["alignment","type"], axis="columns").head()
+poop.drop(["alignment","type"], axis="columns").head()
+poop.dropna()
+poop.dropna().describe()
+poop.dropna().head(2)
+poop.drop(["alignment","type"], axis="columns").head(2)
+poop.dropna(axis="columns").head(2)
+poop.dropna(axis="columns",how="all").head(2)
+poop
+poop = pd.DataFrame(mounts).drop(["alignment","type"],axis="columns")
+poop
+mounts_table = pd.DataFrame(mounts).drop(["alignment","type"],axis="columns")
+mounts_table
+mounts_table['strength']
+mounts_table.describe()
+mounts_table.describe()
+mounts_table
+mounts_table
+mounts_table['subtype']
+help(pd.notnull)
+help(pd)
+mounts_table
+mounts_table.replace('',np.nan)
+import numpy as np
+mounts_table.replace('',np.nan)
+mounts_table.replace('',np.nan).dropna()
+mounts_table.replace('',np.nan).dropna(axis="columns")
+mounts_table.replace('',np.nan).dropna(axis="columns").head
+mounts_table.replace('',np.nan).dropna(axis="columns").head()
+mounts_table.replace('',np.nan).dropna(axis="columns").describe()
+mounts_table.replace('',np.nan).dropna(axis="columns").shape()
+mounts_table.replace('',np.nan).dropna(axis="columns").shape
+mounts_table.replace('',np.nan).shape
+mounts_table.replace('',np.nan).isnull()
+mounts_table.replace('',np.nan).isnull().head()
+mounts_table.replace('',np.nan).isnull().describe()
+mounts_table.replace('',np.nan).isnull().sum()
+mounts_table.replace('',np.nan).isnull().shape()
+mounts_table.replace('',np.nan).isnull().shape
+mounts_table.replace('',np.nan).isnotnull().shape
+mounts_table.replace('',np.nan).notnull().shape
+mounts_table.replace('',np.nan).notnull()
+mounts_table.replace('',np.nan).notnull().sum()
+mounts_table.shape
+mounts_table.replace('',np.nan).dropna(axis="columns").shape
+mounts_table.replace('',np.nan).dropna(axis="columns",how="all").shape
+mounts_table.replace('',np.nan).dropna(axis="columns",how="all")
+mounts_table = mounts_table.replace('',np.nan).dropna(axis="columns",how="all")
+mounts_table
+mounts_table[7]
+mounts_table.index
+mounts_table.index
+mounts_table
+mounts_table[7]
+mounts_table.loc(7)
+mounts_table.iloc(7)
+mounts_table.loc[2]
+mounts_table.loc[7]
+mounts_table
+mounts_table['name']
+mounts_table
+mounts_table.head()
+mounts_table['name']
+mounts_table.loc[29]
+mounts_table.replace(np.nan,'')
+mounts_table.replace(np.nan,'').loc[23]
+mounts_table.replace(np.nan,'',inplace=True)
+mounts_table
+mounts_table['languages']
+%history --help
+%history
+?%history
+%history -n
+%history -f ipython.monsters.history
+%history -f ipython.monsters.history_with_output -o
+?%history
+mounts_table
+mounts_table.columns()
+mounts_table.columns
+mounts_table.columns.tolist()
+mounts_table_columns = mounts_table.columns.tolist()
+mounts_table_columns
+mounts_table.head(1)
+mounts_table_columns
+mounts_table_columns[3]
+mounts_table_columns[3,6,2]
+mounts_table
+mounts_table.unique()
+mounts_table.name.unique()
+mounts_table.stealth.unique()
+mounts_table.size.unique()
+mounts_table_columns
+mounts_table['size'].unique()
+[mounts_table[poop] for poop in mounts_table_columns]
+[mounts_table[poop].unique() for poop in mounts_table_columns]
+[mounts_table[poop].head(1) for poop in mounts_table_columns]
+[mounts_table[poop] for poop in mounts_table_columns]
+[mounts_table[poop].unique() for poop in mounts_table_columns]
+for poop in mounts_table.columns:
+    mounts_table[poop].unique()
+mounts_table
+mounts_table.drop("size",axis="columns",inplace=True)
+mounts_table
+mounts_table.head()
+mounts_table.head()
+mounts_table_columnsts
+mounts_table_columns
+mounts_table.columns
+mounts_table.columns = mounts_table.columns.tolist()
+mounts_table_columns
+mounts_table_columns = [mounts_table_columns[col] for col in 1 3 5]
+[mounts_table_columns[col] for col in 1 3 5]
+[mounts_table_columns[col] for col in (1, 3, 5)]
+poop = mounts_table_columns.copy()
+[poop[col] for col in (1,3,5,2)]
+[poop[col] for col in (1,3,5,2)]
+[poop. for col in (1,3,5,2)]
+[poop.pop(col - 1) for col in (1,3,5,2)]
+poop
+mounts_table_columns
+mounts_table_columns = [mounts_table_columns.pop(col - 1) for col in (11)]
+mounts_table_columns = [mounts_table_columns.pop(col - 1) for col in (11,)]
+mounts_table_columns
+mounts_table.columns = mounts_table.columns.tolist()
+new_order += [mounts_table_columns.pop(col - 1) for col in (11)]
+new_order = []
+new_order += [mounts_table_columns.pop(col - 1) for col in (11)]
+new_order += [mounts_table_columns.pop(col - 1) for col in (11,)]
+mounts_table_columns
+mounts_table
+mounts_table_cols = mounts_table.columns.tolist()
+new_order += [mounts_table_cols.pop(col - 1) for col in (11,)]
+new_order
+mounts_table_cols
+new_order += [mounts_table_cols.pop(col - 1) for col in (3,8,7)]
+new_order
+mounts_table_cols = mounts_table.columns.tolist()
+new_order = []
+new_order += mounts_table_cols.pop(10)
+new_order
+mounts_table_cols = mounts_table.columns.tolist()
+new_order = []
+new_order += [mounts_table_cols.pop(10)]
+new_order
+mounts_table_cols
+new_order += [mounts_table_cols.pop(7)]
+new_order
+new_order = ["name", "challenge_rating", "hit_points", "hit_dice", "speed", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"]
+set(new_order) & set(mounts_table_cols)
+set(new_order).intersection(set(mounts_table_cols))
+set(new_order).difference(set(mounts_table_cols))
+mounts_table_cols
+mounts_table_cols = mounts_table.columns.tolist()
+mounts_table_cols
+set(new_order).difference(set(mounts_table_cols))
+set(new_order).intersection(set(mounts_table_cols))
+help(set)
+set(new_order).symmetric_difference(set(mounts_table_cols))
+new_order = ["name", "challenge_rating", "hit_points", "hit_dice", "armor_class", "speed", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "senses", "perception", "stealth", "special_abilities", "actions", "languages"]
+set(new_order).symmetric_difference(set(mounts_table_cols))
+set(new_order).intersection(set(mounts_table_cols))
+len(monsters)
+len(set(new_order).intersection(set(mounts_table_cols)))
+len(mounts_table.columns)
+mounts_table.columns = new_order
+mounts_table
+mounts_table.head(1)
+mounts_table.columns = new_order
+mounts_table.columns = [new_order]
+mounts_table.head(1)
+mounts_table
+mounts_table = pd.DataFrame(mounts).drop(["alignment","type","size"],axis="columns")
+mounts_table
+mounts_table = mounts_table.replace('',np.nan).dropna(axis="columns",how="all",inplace=True)
+mounts_table
+mounts_table
+mounts_table = pd.DataFrame(mounts).drop(["alignment","type","size"],axis="columns")
+mounts_table
+mounts_table = mounts_table.replace('',np.nan).dropna(axis="columns",how="all")
+mounts_table
+mounts_table.replace(np.nan,'',inplace=True)
+mounts_table
+mounts_table = mounts_table[new_order]
+mounts_table
+mounts_table.head
+mounts_table.head()
+mounts_table.to_excel("mounts.xlsx", index=False, freeze_panes=(1,1))
+mounts_table.to_excel("mounts.xlsx", index=False)
+%history -f ipython.monsters.history
+%history -f ipython.monsters.history_with_output -o
+mounts_table.T.to_excel("mounts.xlsx", index=False)
+mounts_table.T.to_excel("mounts.xlsx", index=False)
+mounts_table
+pd.set_option(width=200)
+mounts_table.head()
+poop = pd.DataFrame(listX)
+poop
+poop.T
+poop
+poop.replace(np.nan, "")
+poop.replace(np.nan, "").T
+12.3
+12/3
+12/0
+a=np.int(12)
+b=np.int(0)
+a/b
+np.int(a/b)
+poop
+poop.replace(np.nan,"",inplace=True)
+poop
+poop['class']
+poop['class','ass']
+poop[['class','ass']]
+monsters
+monsters[2]
+type(monsters)
+monsters[2]
+type(monsters[2])
+monsters[2]['name']
+len(monsters)
+monsters[len(monsters)-1]
+monsters[len(monsters)-1][0]
+monsters[len(monsters)-1]
+monsters.pop([len(monsters)-1])
+monsters.pop(len(monsters)-1)
+len(monsters)
+[critter['name'] for critter in monsters]
+[critter['name'] for critter in monsters if critter['type'] == "beast"]
+table = pd.DataFrame(monsters)
+type(table)
+table.shape()
+table.shape
+table.describe()
+table
+table.head()
+table.dropna(axis="columns")
+table.dropna(axis="columns",inplace=True)
+table.shape
+table = pd.DataFrame(monsters)
+table.shape
+table.dropna(axis="columns",inplace=True,how="all")
+table.shape
+table.replace("", np.nan, inplace=True)
+table.dropna(axis="columns",inplace=True,how="all")
+table.shape
+table['name']
+table[['name','type','intelligence']]
+table[['name','type','intelligence']].T
+table[['name','type','intelligence']].shape
+table[['name','hitpoints','armor_class']].describe
+table[['name','hitpoints','armor_class']].describe()
+table[['name','hit_points','armor_class']].describe()
+table
+table.columns
+table.drop(axis="columns","languages")
+mounts_table
+mounts_table['actions']
+mounts_table['actions'].loc(7)
+mounts_table['actions'].loc("Warhorse")
+unset
+del mounts_table_cols
+del mounts_table_columns
+mounts_table
+mounts_table.set_index("name")
+mounts_table.set_index("name").head()
+mounts_table.set_index("name").head()
+mounts_table.set_index("name")["actions"]
+mounts_table.set_index("name",inplace=True)
+mounts_table
+mounts_table["actions"]
+mounts_table["actions"].loc("Warhorse")
+mounts
+[c['name'] for c in mounts]
+[c['name'] for c in monsters]
+[c['name'] for c in monsters if re.search("ear", c)]
+[c['name'] for c in monsters if re.search(c,"ear")]
+[c['name'] for c in monsters if re.search(c['name,"ear")]
+[c['name'] for c in monsters if re.search(c['name'],"ear")]
+[c['name'] for c in monsters if re.search("ear",c['name'])]
+[c for c in monsters if re.search("ear",c['name'])]
+[c for c in monsters if re.search("Bear",c['name'])]
+[c['size'] for c in monsters if re.search("Bear",c['name'])]
+mounts_table
+mounts_table.loc["Polar Bear"]
+mounts_table.loc["Polar Bear"]["actions"]
+pb_actions = mounts_table.loc["Polar Bear"]["actions"]
+pb_actions
+pb_actions[0]
+pb_actions[0]['desc']
+len(pb_actions)
+mounts_table['actions'].map(len())
+mounts_table['actions'].map(len)
+max(mounts_table['actions'].map(len))
+def nested_col_width(col):
+    return max(col.map(len))
+nested_col_width(mounts_table["actions"])
+nested_col_width(mounts_table["special abilities"])
+nested_col_width(mounts_table["special_abilities"])
+nested_col_width(mounts_table.loc("Warhorse")["special_abilities"])
+nested_col_width(mounts_table.loc("Polar Bear")["special_abilities"])
+nested_col_width(mounts_table.loc("Polar Bear")["actions"])
+mounts_table.loc("Polar Bear")
+mounts_table.loc("Polar Bear")['actions']
+mounts_table
+mounts_table.head()
+mounts_table['actions']
+mounts_table.loc("Polar Bear")['actions']
+mounts_table.loc("Polar Bear")
+history
+mounts_table.loc["Polar Bear"]
+mounts_table.loc["Polar Bear"]['actions']
+mounts_table.loc["Warhorse"]['actions']
+nested_col_width(mounts_table.loc["Warhorse"])
+nested_col_width(mounts_table.loc["Warhorse"]['actions'])
+mounts_table
+mounts_table['actions']
+mounts_table['actions'].apply
+mounts_table['actions'].apply(pd.Series)
+mounts_table['actions'].apply(pd.Series).head()
+dicA
+str(dicA)
+dicA.values
+dicA.values()
+str(dict.values())
+dicA.values()
+type(dicA.values())
+list(dicA.values())
+":".join(list(dicA.values()))
+":".join(map(str,list(dicA.values())))
+dicA
+":".join(map(str,list(dicA.values())))
+":".join([str(val) for val in dicA.values()])
+": ".join(map(str,list(dicA.values())))
+pb_actions
+": ".join(map(str,list(pb_actions[0].values())))
+": ".join(map(str,list(pb_actions[1].values())))
+": ".join(map(str,list(pb_actions[2].values())))
+mounts_table['actions'].apply(pd.Series).head()
+mounts_table['actions'].apply(pd.Series)
+": ".join(map(str,list(pb_actions[2].values())))
+def squish_dict(dic):
+    return ": ".join(map(str,list(dic.values())))
+squish_dict(pb_actions[2])
+mounts_table['actions'].apply(pd.Series)
+mounts_table['actions'].apply(pd.Series).map(squish_dict)
+mounts_table['actions'].apply(pd.Series).applymap(squish_dict)
+mounts_table['actions'].apply(pd.Series)
+mounts_table['actions'].apply(pd.Series)[1:3]
+mounts_table['actions'].apply(pd.Series).applymap(squish_dict)
+mounts_table['actions'].apply(pd.Series)
+mounts_table['actions'].apply(pd.Series)[0]
+mounts_table['actions'].apply(pd.Series)[0].map(squish_dict)
+def squish_dict(dic):
+    if dic isinstance(dict):
+        return ": ".join(map(str,list(dic.values())))
+    else:
+def squish_dict(dic):
+    if dic dict.isinstance():
+        return ": ".join(map(str,list(dic.values())))
+    else:
+def squish_dict(dic):
+    if isinstance(dic, dict):
+        return ": ".join(map(str,list(dic.values())))
+    else:
+        return
+mounts_table['actions'].apply(pd.Series)[0].map(squish_dict)
+mounts_table['actions'].apply(pd.Series).applymap(squish_dict)
+def squish_dict(dic):
+    if isinstance(dic, dict):
+        return ": ".join(map(str,list(dic.values())))
+    else:
+        return ""
+mounts_table['actions'].apply(pd.Series).applymap(squish_dict)
+mounts_table['actions'].apply(pd.Series).applymap(squish_dict).head()
+mounts_table['actions'].apply(pd.Series).applymap(squish_dict)
+expanded_actions = mounts_table['actions'].apply(pd.Series).applymap(squish_dict)
+type(expanded_actions)
+expanded_actions
+# pd.concat([df.drop('b', axis=1), pd.DataFrame(df['b'].tolist())], axis=1)
+listX
+dfX = pd.DataFrame(listX)
+dfX
+help(pd.concat())
+help(pd.concat)
+dfX
+dfX.drop("class",axis="columns")
+help(pd.concat)
+pd.concat([dfX.drop("class",axis="columns"), dfX.drop("cock",axis="columns")])
+pd.concat([dfX.drop("class",axis="columns"), dfX.drop("cock",axis="columns")], axis="columns")
+pd.concat([dfX.drop("class",axis="columns"), dfX.drop(["ass","butt","cock"],axis="columns")], axis="columns")
+help(pd.concat)
+mounts_table[2:3]
+mounts_table.loc["challenge_rating":"speed"]
+mounts_table.loc[:"challenge_rating":"speed"]
+mounts_table.loc[:,"challenge_rating":"speed"]
+mounts_table.loc[:,"challenge_rating":"speed"].head()
+help(pd.DataFrame.loc)
+mounts_table.loc[:,"challenge_rating":"speed"].head()
+mounts_table.loc[:,"challenge_rating":"speed"-1].head()
+mounts_table.iloc[4:5].head()
+mounts_table.iloc[2:5].head()
+mounts_table.iloc[:,2:5].head()
+mounts_table.get_loc("actions")
+mounts_table.columns.get_loc("actions")
+mounts_table.iloc[:, 0:1]
+mounts_table.iloc[:, 1:1]
+mounts_table.iloc[:, -1:1]
+mounts_table.iloc[:, 0:mounts_table.columns.get_loc("actions") - 1 ]
+mounts_table.iloc[:, 0:mounts_table.columns.get_loc("actions") - 1 ].head()
+mounts_table.iloc[:, 0:mounts_table.columns.get_loc("hit_dice") - 1 ].head()
+mounts_table
+mounts_table.iloc[:, 0:mounts_table.columns.get_loc("actions") - 1 ].head()
+mounts_table.iloc[:, 0:mounts_table.columns.get_loc("actions") - 1 ]
+pd.concat([mounts_table.iloc[:, 0:mounts_table.columns.get_loc("actions") - 1 ], mounts_table.iloc[:,mounts_table.columns.get_loc("actions") + 1]], axis="columns")
+pd.concat([mounts_table.iloc[:, 0:mounts_table.columns.get_loc("actions") - 1 ], mounts_table.iloc[:,mounts_table.columns.get_loc("actions") + 1]], axis="columns").head()
+pd.concat([mounts_table.iloc[:, 0:mounts_table.columns.get_loc("actions") - 1 ], mounts_table.iloc[:,mounts_table.columns.get_loc("actions") + 1]], axis="columns").head(1)
+pd.concat([mounts_table.iloc[:, 0:mounts_table.columns.get_loc("actions") - 1 ], mounts_table.iloc[:,mounts_table.columns.get_loc("actions") + 1]], axis="columns").head(0)
+mounts_table.head(0)
+pd.concat([mounts_table.iloc[:, 0:mounts_table.columns.get_loc("actions") - 1 ], mounts_table.iloc[:,mounts_table.columns.get_loc("actions") + 1:-1]], axis="columns").head(0)
+pd.concat([mounts_table.iloc[:, 0:mounts_table.columns.get_loc("actions") - 1 ], mounts_table.iloc[:,mounts_table.columns.get_loc("actions") + 1:]], axis="columns").head(0)
+pd.concat([mounts_table.iloc[:, 0:mounts_table.columns.get_loc("actions") - 1 ], mounts_table.iloc[:,mounts_table.columns.get_loc("actions") + 1:]], axis="columns").head(0)
+mounts_table.head(0)
+pd.concat([mounts_table.iloc[:, 0:mounts_table.columns.get_loc("actions")], mounts_table.iloc[:,mounts_table.columns.get_loc("actions") + 1:]], axis="columns").head(0)
+mounts_table.head(0)
+expanded_actions = mounts_table['actions'].apply(pd.Series).applymap(squish_dict)
+expanded_actions
+pd.concat([mounts_table.iloc[:, 0:mounts_table.columns.get_loc("actions")], mounts_table.iloc[:,mounts_table.columns.get_loc("actions") + 1:]], axis="columns").head(0)
+pd.concat([mounts_table.iloc[:, 0:mounts_table.columns.get_loc("actions")], mounts_table['actions'].apply(pd.Series).applymap(squish_dict),mounts_table.iloc[:,mounts_table.columns.get_loc("actions") + 1:]], axis="columns").head(0)
+mounts_table.head(0)
+pd.concat([mounts_table.iloc[:, 0:mounts_table.columns.get_loc("actions")], mounts_table['actions'].apply(pd.Series).applymap(squish_dict).columns=["a1","a2","a3"],mounts_table.iloc[:,mounts_table.columns.get_loc("actions") + 1:]], axis="columns").head(0)
+pd.concat([mounts_table.iloc[:, 0:mounts_table.columns.get_loc("actions")], mounts_table['actions'].apply(pd.Series).applymap(squish_dict),mounts_table.iloc[:,mounts_table.columns.get_loc("actions") + 1:]], axis="columns").head(0)
+def expand_column(table, col_name):
+    col_id = table.columns.get_loc(col_name)
+    
+    return pd.concat([table.iloc[:, 0:col_id], table[col_name].apply(pd.Series).applymap(squish_dict), table.iloc[:,col_id + 1:]], axis="columns")
+expand_column(mounts_table, "actions")
+expand_column(mounts_table, "actions").head(0)
+expanded_actions = expand_column(mounts_table, "actions").head(0)
+expanded_actions_special_abilities = expand_column(expanded_actions, "special_abilities")
+expanded_actions = expand_column(mounts_table, "actions")
+expanded_actions_special_abilities = expand_column(expanded_actions, "special_abilities")
+expanded_actions_special_abilities
+expanded_actions_special_abilities.head(0)
+expanded_actions_special_abilities["polar bear"]
+expanded_actions_special_abilities["Polar Bear"]
+expanded_actions_special_abilities
+expanded_actions_special_abilities.loc["Polar Bear"]
+help(expanded_actions)
+help(expand_column)
+expand_column
+expand_column()
+%edit expand_column
+expanded_actions_special_abilities = expand_column(expanded_actions, "special_abilities")
+expanded_actions_special_abilities.loc["Polar Bear"]
+dfX
+dfX.rename(columns=["_".join(["col_head", col]) for col in dfX.columns])
+dfX.rename(columns=["_".join(["col_head", col]) for col in dfX.columns.tolist()])
+dfX.rename(columns=["_".join(["col_head", col]) for col in dfX.columns])
+dfX.columns
+dfX.columns.tolist
+dfX.columns.tolist()
+dfX.rename(columns=["_".join(["col_head", col]) for col in dfX.columns.tolist()])
+dfX.rename(columns=["_".join(["col_head", str(col)]) for col in dfX.columns.tolist()])
+dfX.rename(columns=["_".join(["col_head", str(col)]) for col in [1,2,3]])
+dfX.rename(columns=[col for col in [1,2,3]])
+dfX.rename(columns=[col for col in [1,2,3]])
+[col for col in [1,2,3]]
+dfX.rename(columns=[str(col) for col in [1,2,3]])
+dfX.rename(columns=[3,5,8])
+dfX.rename(columns=lambda col: col = 2)
+dfX.rename(columns=lambda col: col)
+dfX.rename(columns=lambda col: range(4))
+dfX.rename(columns=lambda col: col.replace("","butt"))
+dfX.rename(columns=lambda col: col.replace("^","butt"))
+dfX.rename(columns=lambda col: col="grr"+col)
+dfX.rename(columns=lambda col: "grr"+col)
+dfX.rename(columns=lambda col_name: "action_" + col_name)
+%ed expand_column
+expanded_actions_special_abilities = expand_column(expanded_actions, "special_abilities")
+%ed expand_column
+expanded_actions_special_abilities = expand_column(expanded_actions, "special_abilities")
+expanded_actions_special_abilities["polar bear"]
+expanded_actions_special_abilities.loc["Polar Bear"]
+expanded_actions_special_abilities = expand_column(expanded_actions, "special_abilities")
+expanded_actions_special_abilities.loc["Polar Bear"]
+expand_column(mounts_table, "actions")
+expand_column(mounts_table, "actions").head(0)
+%ed expand_column
+expand_column(mounts_table, "actions").head(0)
+%ed expand_column
+expand_column(mounts_table, "actions").head(0)
+%ed expand_column
+expand_column()
+%edit expand_colum
+%edit expand_column
+help(expand_column)
+%print(expand_column())
+fg
+%fg
+%!ff
+%!fg
+def expand_column(table, col_name):
+    col_id = table.columns.get_loc(col_name)
+
+    expanded_column = table[col_name].apply(pd.Series).applymap(squish_dict)
+    #expanded_column.rename(columns=lambda label: "_".join([col_name, str(label)]))
+    expanded_column.rename(columns=lambda label: col_name + "_" + str(label))
+
+    print(expanded_column.head(0))
+    
+    return pd.concat([table.iloc[:, 0:col_id], expanded_column, table.iloc[:,col_id + 1:]], axis="columns")
+expand_column(mounts_table, "actions").head(0)
+%edit expand_column
+%edit expand_column
+expand_column(mounts_table, "actions").head(0)
+%edit expand_column
+expanded_column.rename(columns=lambda label: "col_name" + "_" + str(label))
+dfX
+dfX.rename(columns=lambda label: "col_name" + "_" + str(label))
+%ed expand_column
+expand_column(mounts_table, "actions").head(0)
+%ed expand_column
+expand_column(mounts_table, "actions").head(0)
+expand_column(expand_column(mounts_table, "actions"), "special_abilities")
+expand_column(expand_column(mounts_table, "actions"), "special_abilities").head(0)
+expanded_mounts_table = expand_column(expand_column(mounts_table, "actions"), "special_abilities")
+%history -f ipython.monsters.history
