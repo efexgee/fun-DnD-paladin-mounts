@@ -833,3 +833,162 @@ mounts_table['hit_dice'].map(max_roll)
 mounts_table['hit_dice'].map(max_roll)
 mounts_table['hit_dice'].map(max_roll)
 %history -f ipython.monsters.history
+# pandas.io.json.json_normalize
+monsters
+help(pandas.io.json.json_normalize)
+help(pd.io.json.json_normalize)
+norm_df = pd.io.json.json_normalize(monsters)
+norm_df.head()
+norm_df.to_excel("poop.xlsx")
+help(pd.io.json.json_normalize)
+norm_df = pd.io.json.json_normalize(monsters, 'special_abilities', ['name','desc','attack_bonus'])
+norm_df = pd.io.json.json_normalize(monsters, 'name')
+norm_df
+norm_df = pd.io.json.json_normalize(monsters, 'special_abilities')
+monsters
+norm_df = pd.io.json.json_normalize(monsters, 'actions')
+monsters[-1]
+norm_df = pd.io.json.json_normalize(monsters[0], 'actions')
+norm_df
+norm_df = pd.io.json.json_normalize(monsters[0], 'actions','special_abilities')
+monsters[0]
+norm_df = pd.io.json.json_normalize(monsters[0], 'actions','legendary_actions')
+norm_df = pd.io.json.json_normalize(monsters[0], 'special_abilities')
+norm_df
+pd.io.json.json_normalize(monsters[0], 'special_abilities')
+pd.io.json.json_normalize(monsters[0:1], 'special_abilities')
+monsters[1]
+pd.io.json.json_normalize(monsters[1], 'special_abilities')
+pd.io.json.json_normalize(monsters[0:1], 'special_abilities')
+pd.io.json.json_normalize(monsters[0:2], 'special_abilities')
+pd.io.json.json_normalize(monsters[0:3], 'special_abilities')
+pd.io.json.json_normalize(monsters[0:3], 'special_abilities','name')
+pd.io.json.json_normalize(monsters[0:3], 'special_abilities',['name'])
+pd.io.json.json_normalize(monsters[0:3], 'special_abilities')
+pd.io.json.json_normalize(monsters[0:3], 'special_abilities', 'actions')
+pd.io.json.json_normalize(monsters[0:3], ['special_abilities', 'actions'])
+pd.io.json.json_normalize(monsters[0:3], 'special_abilities')
+pd.io.json.json_normalize(monsters[0], 'special_abilities')
+pd.io.json.json_normalize(monsters[0], 'special_abilities','name')
+pd.io.json.json_normalize(monsters[0], 'special_abilities','name',true)
+pd.io.json.json_normalize(monsters[0], 'special_abilities','name',True)
+pd.io.json.json_normalize(monsters[0], 'special_abilities','name')
+pd.io.json.json_normalize(monsters[0], 'special_abilities')
+pd.io.json.json_normalize(monsters[0], 'special_abilities','special_abilties')
+pd.io.json.json_normalize(monsters[0], ['special_abilities','special_abilties'])
+pd.io.json.json_normalize(monsters[0], 'special_abilities','special_abilities')
+pd.io.json.json_normalize(monsters[0], ['special_abilities','special_abilities'])
+monsters[0]
+monsters[0] | more
+monsters[0].head()
+monsters[0].keys()
+pd.io.json.json_normalize(monsters[0], ['special_abilities','special_abilities'])
+pd.io.json.json_normalize(monsters[0], ['actions', 'special_abilities'])
+pd.io.json.json_normalize(monsters[0], 'actions', 'special_abilities')
+pd.io.json.json_normalize(monsters[0], 'actions')
+pd.io.json.json_normalize(monsters[0], 'special_abilities')
+pd.io.json.json_normalize(monsters[0], 'actions')
+pd.io.json.json_normalize(monsters[0], 'actions','special_abilities')
+pd.io.json.json_normalize(monsters[0], 'actions','name')
+pd.io.json.json_normalize(monsters[0], 'actions','name',"pre_")
+pd.io.json.json_normalize(monsters[0], 'actions','name',True)
+pd.io.json.json_normalize(monsters[0], 'actions','name',"pre_")
+pd.io.json.json_normalize(monsters[0:1], 'actions','name',"pre_")
+pd.io.json.json_normalize(monsters[0:2], 'actions','name',"pre_")
+pd.io.json.json_normalize(monsters[0:2], 'actions',['name','type'],"pre_")
+pd.io.json.json_normalize(monsters[0:2], 'actions',['name','type'],"creature_")
+pd.io.json.json_normalize(monsters[0:2], 'actions',['name','type'],"creature_","metar_")
+pd.io.json.json_normalize(monsters[0:2], 'actions',['name','type'], None,"action_")
+pd.io.json.json_normalize(monsters[0:2], 'actions',['name','type','size'], None,"action_")
+pd.io.json.json_normalize(monsters, 'actions',['name','type','size'], None,"action_")
+pd.io.json.json_normalize(monsters[0:2], 'actions',['name','type','size'], None,"action_")
+pd.io.json.nested_to_record(monsters[0], 'actions',['name','type','size'], None,"action_")
+pd.io.json.nested_to_record(monsters[0])
+pd.DataFrame(pd.io.json.nested_to_record(monsters[0]))
+pd.io.json.nested_to_record(monsters[0])
+dicA
+pd.io.json.nested_to_record(monsters[0]).keys()
+monsters[0].keys()
+pd.io.json.nested_to_record(monsters[0]).special_abilities
+pd.io.json.nested_to_record(monsters[0])['special_abilities']
+monsters[0]['special_abilities']
+dicN=[a: 1, b: 2, c: [x: 11, y: 22], d: 4]
+dicN={a: 1, b: 2, c: [x: 11, y: 22], d: 4}
+dicN={a: 1, b: 2, c: {x: 11, y: 22}, d: 4}
+dicA
+dicN={'a': 1, 'b': 2, 'c': {'x': 11, 'y': 22}, 'd': 4}
+dicN
+pd.io.json.nested_to_record(dicN)
+monsters[0]
+pd.io.json.nested_to_record(monsters[0])['special_abilities']
+pd.io.json.nested_to_record(monsters[0])
+pd.io.json.nested_to_record(monsters[0],2)
+pd.io.json.nested_to_record(monsters[0],22)
+pd.io.json.nested_to_record(monsters[0],"poop_",22)
+pd.io.json.nested_to_record(monsters[0],"poop",22)
+pd.io.json.nested_to_record(monsters[0],"poop",22)['name']
+pd.io.json.nested_to_record(monsters[0],"poop",22)['poop.name']
+dicN
+dicM={'A': 100, 'B': 200, 'C': [{"X": 1100, "Y": 2200},{"Z": 3300}], "D": 400}
+dicM
+pd.io.json.nested_to_record(dicN)
+pd.io.json.nested_to_record(dicM)
+pd.io.json.normalize_json(dicN)
+pd.io.json.json_normalize(dicN)
+pd.io.json.json_normalize(dicM)
+pd.io.json.json_normalize(dicM,"C")
+pd.io.json.json_normalize(dicN,"C")
+pd.io.json.json_normalize(dicN,"c")
+dicN
+pd.io.json.json_normalize(dicN)
+pd.io.json.json_normalize(dicN,'c',['a','b','d'])
+pd.io.json.json_normalize(dicM)
+pd.io.json.json_normalize(dicM,'C')
+pd.io.json.json_normalize(dicM,'C',['A','B','D'])
+pd.io.json.json_normalize(dicM,'C',['A','B','D'],True)
+pd.io.json.json_normalize(dicM,'C',['A','B','D'],None,"C")
+dicN
+pd.io.json.json_normalize(dicN)
+dicM
+pd.io.json.json_normalize(dicM)
+pd.io.json.json_normalize(dicM,'C',['A','B','D'],None,"C")
+pd.io.json.json_normalize(dicM,'C',['A','B','D'],None,"C_")
+dicN
+pd.io.json.nested_to_record(dicN)
+pd.DataFrame(pd.io.json.nested_to_record(dicN))
+pd.io.json.nested_to_record(dicN)
+pd.DataFrame(dicA)
+pd.DataFrame.from_dict(dicA)
+pd.DataFrame.from_dict(dicA)
+pd.DataFrame.from_dict(dicA, orient="columns")
+pd.Series(dicA)
+pd.Series(pd.io.json.nested_to_record(dicN))
+pd.Series(pd.io.json.nested_to_record(dicN),axis="columns")
+pd.Series(pd.io.json.nested_to_record(dicN),orient="columns")
+help(pd.Series)
+pd.Series(pd.io.json.nested_to_record(dicN))
+pd.DataFrame(pd.Series(pd.io.json.nested_to_record(dicN)))
+pd.Series(pd.io.json.nested_to_record(dicN))
+pd.Series(pd.io.json.nested_to_record(dicN)).T
+pd.Series(pd.io.json.nested_to_record(dicN))
+pd.Series(pd.io.json.nested_to_record(dicN),dicN)
+pd.DataFrame(pd.io.json.nested_to_record(dicN),dicN)
+dicN
+pd.DataFrame([pd.io.json.nested_to_record(dicN)])
+dicN
+pd.DataFrame([pd.io.json.nested_to_record(dicN)])
+dicM
+pd.DataFrame([pd.io.json.nested_to_record(dicM)])
+lA = ["a","b","c"]
+lA
+dict(lA)
+ldics=[{"a": 1, "b": 2}, {"a":11,"b":22}, {"a":111,"b":222}]
+ldics
+dict(ldics)
+{dic for dic in ldics}
+[dic for dic in ldics]
+{"d":dic for dic in ldics}
+{id:dic for id,dic in range(4),ldics}
+{"d":dic for dic in ldics}
+{range(2):dic for dic in ldics}
+%history -f ipython.monsters.history
